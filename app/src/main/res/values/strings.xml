@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">About Me</string>
     <string name="star_image">Star image</string>
-    <string name="thomas">Thomas</string>
+    <string name="thomas">Thomas Phillips</string>
+    <string name="bio">I am an engineer who enjoys pairing artistic creativity to technical problems
+        to find innovative solutions.\n\nThrough your existence, become wealthy. Knowledge is King.
+        \" -Nasir Bin Olu Dara Jones"\n\nhttps://www.linkedin.com/in/thomasphillips3/</string>
 </resources>

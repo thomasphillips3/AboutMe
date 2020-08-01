@@ -4,22 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/name_text"
+        style="@style/NameStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/thomas"
-        android:textAlignment="center"
-        style="@style/NameStyle" />
+        android:textAlignment="center" />
 
     <ImageView
         android:id="@+id/star_image"
-        app:srcCompat="@android:drawable/btn_star_big_on"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/star_image" />
+        android:contentDescription="@string/star_image"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/bitmoji" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/AboutMeStyle"
+            android:text="@string/bio" />
+    </ScrollView>
 
 </LinearLayout>
