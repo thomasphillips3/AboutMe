@@ -5,4 +5,6 @@
     <string name="bio">I am an engineer who enjoys pairing artistic creativity to technical problems
         to find innovative solutions.\n\nThrough your existence, become wealthy. Knowledge is King.
         \" -Nasir Bin Olu Dara Jones"\n\nhttps://www.linkedin.com/in/thomasphillips3/</string>
+    <string name="nickname">Nickname</string>
+    <string name="change">Change</string>
 </resources>

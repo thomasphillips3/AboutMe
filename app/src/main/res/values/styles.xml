@@ -22,4 +22,21 @@
         <item name="android:padding">@dimen/layout_margin</item>
     </style>
 
+    <style name="EditTextStyle" parent="NameStyle">
+        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">textPersonName</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:backgroundTint">@android:color/holo_green_light</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
 </resources>
