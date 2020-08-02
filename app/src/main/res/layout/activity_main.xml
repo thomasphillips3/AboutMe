@@ -1,59 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/name_text"
-        style="@style/NameStyle"
+    <data>
+        <variable
+            name="myName"
+            type="com.thomasphillips3.aboutme.MyName" />
+    </data>
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/thomas"
-        android:textAlignment="center" />
-
-    <TextView
-        android:id="@+id/nicknameText"
-        style="@style/EditTextStyle"
-        android:paddingBottom="@dimen/zero_dp"
-        android:paddingTop="@dimen/zero_dp"
-        android:visibility="gone"
-        android:text="" />
-
-    <EditText
-        android:id="@+id/nicknameEdit"
-        style="@style/EditTextStyle"
-        android:hint="@string/nickname" />
-
-    <Button
-        android:id="@+id/button"
-        style="@style/ButtonStyle"
-        android:onClick="updateNickname"
-        android:text="@string/change" />
-
-    <ImageView
-        android:id="@+id/star_image"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/star_image"
-        app:srcCompat="@android:drawable/btn_star_big_on" />
-
-    <ImageView
-        android:id="@+id/avatar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/bitmoji" />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
         <TextView
-            style="@style/AboutMeStyle"
-            android:text="@string/bio" />
-    </ScrollView>
+            android:id="@+id/name_text"
+            style="@style/NameStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={myName.name}"
+            android:textAlignment="center" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/nicknameText"
+            style="@style/NicknameTextStyle"
+            android:text="@={myName.nickname}"/>
+
+        <EditText
+            android:id="@+id/nicknameEdit"
+            style="@style/EditTextStyle"
+            android:hint="@string/nickname"
+            android:text="@={myName.nickname}" />
+
+        <Button
+            android:id="@+id/button"
+            style="@style/ButtonStyle"
+            android:onClick="updateNickname"
+            android:text="@string/change" />
+
+        <ImageView
+            android:id="@+id/star_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/star_image"
+            app:srcCompat="@android:drawable/btn_star_big_on" />
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/bitmoji" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/AboutMeStyle"
+                android:text="@string/bio" />
+        </ScrollView>
+
+    </LinearLayout>
+</layout>
